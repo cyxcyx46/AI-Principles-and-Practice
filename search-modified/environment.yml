@@ -1,0 +1,16 @@
+# 路径搜索（CS188 Pacman Search 改版）—— 环境定义
+#
+# 平台容器里是 Python 3.10（__pycache__ 里是 cpython-310），
+# 项目本身只用标准库，没有第三方依赖，所以这里只需要 python。
+#
+#   conda env create -f environment.yml
+#   conda activate search-modified
+#
+# 注意：不要升到 3.13 —— grading.py 里的 `import cgi` 在 3.13 已被移除。
+
+name: search-modified
+channels:
+  - defaults
+
+dependencies:
+  - python=3.10

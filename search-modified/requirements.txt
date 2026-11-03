@@ -1,0 +1,12 @@
+# 本项目没有任何第三方依赖，全部使用 Python 标准库。
+#
+#   - 图形界面：tkinter（随 CPython/Anaconda 一起装，不需要 pip install）
+#   - 判分脚本：cgi（3.10 标准库；3.13 已移除，这是必须锁 3.10 的原因）
+#   - game.py 里的 boinc 是 try/except 包着的可选依赖，装了才会启用 BOINC 进度条
+#
+# Python 版本：3.10（平台 __pycache__ 为 cpython-310）
+#
+# 因此本文件故意保持为空；如果你确实想装点什么，再加到这里。
+# 环境请用 conda：
+#   conda env create -f environment.yml
+#   conda activate search-modified
