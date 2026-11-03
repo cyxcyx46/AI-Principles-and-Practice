@@ -1,0 +1,13 @@
+# 本项目没有任何第三方依赖，故意留空。
+#
+# 全部 import 均来自标准库或项目自身模块：
+#   tkinter / heapq / random / math / re / os / sys / json / pickle /
+#   importlib / inspect / optparse / bz2 / base64 / codecs / signal /
+#   functools / collections / traceback / types / warnings / html /
+#   string / io / time / pprint / imp (3.10 仍在标准库内)
+#
+# 唯一在代码里出现的非标准库名字是 boinc（BOINC 客户端进度条），
+# 但 game.py 第 542 行是 `try: import boinc` 包在 try/except 里的，
+# 不安装也能正常运行，只是没有进度条。
+#
+# 因此 `pip install -r requirements.txt` 不需要执行任何安装。

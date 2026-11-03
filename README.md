@@ -6,8 +6,7 @@
 | 项目 | 主题 | 关键技术 | 状态 |
 |---|---|---|---|
 | [search-modified](search-modified/) | 搜索（基于 CS188 *Project 1: Search* 改版） | DFS / BFS / UCS / A* / 启发式设计 | ✅ 8/8 关通过 |
-
-> 规划中：`multiagent-modified`（多智能体，Project 2 改版）等。
+| [multiagent-modified](multiagent-modified/) | 多智能体（基于 CS188 *Project 2: Multiagent Search* 改版） | Minimax / α-β 剪枝 / Expectimax / 评估函数设计 | ✅ 5/5 关通过（25/25） |
 
 ## 通用约定
 
@@ -15,17 +14,20 @@
 
 | | |
 |---|---|
-| Python | **3.10**（`grading.py` 依赖 3.13 已移除的 `cgi` 模块） |
+| Python | **3.10**（`search-modified` 的 `grading.py` 依赖 3.13 已移除的 `cgi`；`multiagent-modified` 的 `autograder.py` 依赖 3.12 已移除的 `imp`） |
 | 依赖 | 零第三方依赖，仅标准库 + `tkinter` |
 | 环境 | 每个项目自带 `environment.yml`：`conda env create -f environment.yml` |
-| 判分 | 进入项目目录后 `python run_autograder.py` |
-| 界面 | `python pacman.py -l <layout> -p <Agent> -a fn=<搜索函数>` |
+| 判分 | 进入项目目录后运行：`search-modified` 用 `python run_autograder.py`（平台版 `autograder.py` 缺 `__main__` 守卫，另备了入口）；`multiagent-modified` 用 `python autograder.py` |
+| 界面 | `python pacman.py -l <layout> -p <Agent> -a <参数>` |
 
 ## 各项目文档
 
 - [search-modified / README](search-modified/README.md) —— 环境搭建、架构与调用链、
   变量关系、8 关实现位置、复现与调试手册、常见错误对照
 - [search-modified / 关卡说明](search-modified/关卡说明/README.md) —— 8 关原题面
+- [multiagent-modified / README](multiagent-modified/README.md) —— 博弈树搜索的四种形态、
+  `GameState` / `AgentState` / `Grid` 对象关系、5 关实现位置、探针脚本与常见错误对照
+- [multiagent-modified / 关卡说明](multiagent-modified/关卡说明/README.md) —— 6 关原题面
 
 ## 许可与致谢
 

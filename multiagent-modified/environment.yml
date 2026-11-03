@@ -1,0 +1,22 @@
+# conda 环境定义 · 多智能体博弈（CS188 Project 2: Multiagent search）
+#
+# 重建：
+#   conda env create -f environment.yml
+#   conda activate multiagent-modified
+#
+# 为什么锁 python=3.10：
+#   本项目 autograder.py 第 27 行是裸 `import imp`，且第 138 行实际调用了
+#   imp.load_source()。imp 模块在 Python 3.12 被正式移除，因此 3.12 / 3.13
+#   会直接 ModuleNotFoundError。3.10 是能完整运行、且足够新的版本。
+#
+# 为什么需要 tk：
+#   有图形界面时 pacman.py 用 tkinter 绘制窗口（graphicsDisplay.py）。
+#   加 --no-graphics 判分时可以不用，但保留才能正常开界面调试。
+name: multiagent-modified
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - tk=8.6
+  - pip
